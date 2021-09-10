@@ -1,4 +1,4 @@
-package com.wenbo.thread;
+package com.wenbo.thread.communication;
 
 import java.util.ArrayList;
 import java.util.List;
