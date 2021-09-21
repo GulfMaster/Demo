@@ -64,6 +64,8 @@ public class ThreadCreation {
         ThreadTest thread = new ThreadTest();
         thread.setName("方式一");
         thread.start();
+        // 线程执行完毕后会进入终止状态，此时再start会报java.lang.IllegalThreadStateException
+        //thread.start();
 
         // 实现Runnable
         RunnableTest runnableTest = new RunnableTest();
