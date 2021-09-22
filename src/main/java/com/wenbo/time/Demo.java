@@ -1,5 +1,7 @@
 package com.wenbo.time;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -10,6 +12,10 @@ import java.util.Date;
  */
 public class Demo {
     public static void main(String[] args) {
-        System.out.println(WeekUtil.getThisWeekMonday(new Date(),WeekUtil.DATE_FORMAT_MILLISECOND));
+        System.out.println(StartTimeUtil.getMondayOfWeek(new Date()));
+        System.out.println(StartTimeUtil.getMondayOfWeek(new Date(), StartTimeUtil.DATE_FORMAT_MILLISECOND));
+        System.out.println(StartTimeUtil.getFirstDayOfMonth(new Date()));
+        System.out.println(StartTimeUtil.getFirstDayOfMonth(new Date(), StartTimeUtil.DATE_FORMAT_MILLISECOND));
+
     }
 }
