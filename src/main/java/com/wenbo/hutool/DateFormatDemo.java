@@ -21,7 +21,7 @@ public class DateFormatDemo {
         String format = DateUtil.format(date, "yyyy/MM/dd");
         System.out.println(format);
         //常用格式的格式化，结果：2017-03-01
-        String formatDate = DateUtil.formatDate(date);
+        String formatDate = DateUtil.formatDate(new Date());
         System.out.println(formatDate);
 
         //结果：2017-03-01 00:00:00
