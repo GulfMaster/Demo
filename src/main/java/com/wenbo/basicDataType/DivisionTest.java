@@ -8,7 +8,9 @@ package com.wenbo.basicDataType;
  */
 public class DivisionTest {
     public static void main(String[] args) {
-        int num = 230199/100;
+        long num = 230199L/100L;
+        double num2 = 230167f/100f;
         System.out.println(num);
+        System.out.println(num2);
     }
 }
