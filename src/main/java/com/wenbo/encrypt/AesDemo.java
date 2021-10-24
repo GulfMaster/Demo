@@ -15,6 +15,8 @@ public class AesDemo {
     public static void main(String[] args) {
         showEncrypt("17751001234");
         showEncrypt("12345678901234567890123456789012345678901234567890@qq.com");
+//        showEncrypt("");
+//        showEncrypt(null);
     }
     private static void showEncrypt(String str){
         String encryptStr = aes.encryptBase64(str);
