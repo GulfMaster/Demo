@@ -26,10 +26,7 @@ public class StartTimeUtil {
         // 时间设置到周一，此时时间为周一的日期
         cal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
         // 将时分秒毫秒置零
-        cal.set(Calendar.HOUR_OF_DAY, 0);
-        cal.set(Calendar.MINUTE, 0);
-        cal.set(Calendar.SECOND, 0);
-        cal.set(Calendar.MILLISECOND, 0);
+        setHourMinuteSecondMillisecondZero(cal);
         return cal.getTime();
     }
 
@@ -54,10 +51,7 @@ public class StartTimeUtil {
         cal.setTime(date);
         cal.set(Calendar.DAY_OF_MONTH, 1);
         // 将时分秒毫秒置零
-        cal.set(Calendar.HOUR_OF_DAY, 0);
-        cal.set(Calendar.MINUTE, 0);
-        cal.set(Calendar.SECOND, 0);
-        cal.set(Calendar.MILLISECOND, 0);
+        setHourMinuteSecondMillisecondZero(cal);
         return cal.getTime();
     }
 
@@ -70,6 +64,34 @@ public class StartTimeUtil {
     public static String getFirstDayOfMonth(Date date,SimpleDateFormat sdf)  {
         Date thisWeekMonday = getFirstDayOfMonth(date);
         return sdf.format(getFirstDayOfMonth(thisWeekMonday));
+    }
+
+    /**
+     * 获取当日的零时零分零秒
+     */
+    public static Date getTodayStartTime() {
+        Calendar cal = Calendar.getInstance();
+        // 将时分秒毫秒置零
+        setHourMinuteSecondMillisecondZero(cal);
+        return cal.getTime();
+    }
+
+    /**
+     * 获取当日的零时零分零秒
+     */
+    public static String getTodayStartTime(SimpleDateFormat sdf)  {
+        Date thisWeekMonday = getTodayStartTime();
+        return sdf.format(getTodayStartTime());
+    }
+
+    /**
+     * 将时分秒毫秒置零
+     */
+    public static void setHourMinuteSecondMillisecondZero(Calendar calendar){
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
     }
 
 }
