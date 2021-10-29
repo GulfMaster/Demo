@@ -10,11 +10,24 @@ import java.util.Date;
  */
 public class Demo {
     public static void main(String[] args) {
-        System.out.println(StartTimeUtil.getMondayOfWeek(new Date()));
-        System.out.println(StartTimeUtil.getMondayOfWeek(new Date(), StartTimeUtil.DATE_FORMAT_MILLISECOND));
-        System.out.println(StartTimeUtil.getFirstDayOfMonth(new Date()));
-        System.out.println(StartTimeUtil.getFirstDayOfMonth(new Date(), StartTimeUtil.DATE_FORMAT_MILLISECOND));
-        System.out.println(StartTimeUtil.getTodayStartTime());
-        System.out.println(StartTimeUtil.getTodayStartTime(StartTimeUtil.DATE_FORMAT_MILLISECOND));
+        System.out.println(StartTimeUtil.getFirstDayOfSomeMonth(new Date(),-1));
+        System.out.println(EsParamUtil.getEsSearchTimeStr(StartTimeUtil.getFirstDayOfSomeMonth(new Date(),-1)));
+        System.out.println(StartTimeUtil.getMaxDayNumOfSomeMonth(new Date(),-1));
+
+        System.out.println(EsParamUtil.getEsSearchTimeStr(StartTimeUtil.getFirstDayOfSomeMonth(new Date(),0)));
+        System.out.println(StartTimeUtil.getMaxDayNumOfSomeMonth(new Date(),0));
+
+        System.out.println(EsParamUtil.getEsSearchTimeStr(StartTimeUtil.getFirstDayOfSomeMonth(new Date(),1)));
+        System.out.println(StartTimeUtil.getMaxDayNumOfSomeMonth(new Date(),1));
+
+        System.out.println(EsParamUtil.getEsSearchTimeStr(StartTimeUtil.getFirstDayOfSomeMonth(new Date(),2)));
+        System.out.println(StartTimeUtil.getMaxDayNumOfSomeMonth(new Date(),2));
+
+        System.out.println(EsParamUtil.getEsSearchTimeStr(StartTimeUtil.getFirstDayOfSomeMonth(new Date(),3)));
+        System.out.println(StartTimeUtil.getMaxDayNumOfSomeMonth(new Date(),3));
+
+        System.out.println(EsParamUtil.getEsSearchTimeStr(StartTimeUtil.getFirstDayOfSomeMonth(new Date(),4)));
+        System.out.println(StartTimeUtil.getMaxDayNumOfSomeMonth(new Date(),4));
+
     }
 }
