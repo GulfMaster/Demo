@@ -5,7 +5,7 @@ package com.wenbo.loop;
  * @date: 2021-10-17 17:00:47
  * @desc: 嵌套循环 break
  */
-public class MutiLoopBreak {
+public class MutiLoopContinue {
     public static void main(String[] args) {
 //        breakOneLoop();
         breakMultiLoop();
@@ -20,7 +20,7 @@ public class MutiLoopBreak {
                 if (i == 5 && j == 6) {
                     System.out.println("i:" + i + " j:" + j);
                     System.out.println("----------------------");
-                    break flag;
+                    continue flag;
                 }
                 System.out.println("i:" + i + " j:" + j);
             }
