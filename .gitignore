@@ -3,3 +3,4 @@ target
 src/main/java/com/wenbo/ignore
 out
 *.iml
+*.xlsx
